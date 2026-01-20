@@ -1,12 +1,18 @@
 # MERNG-TypeScript Starter
 
-MongoDB | Express | React | Node.js | GraphQL | TypeScript
+<p align="center">
+  <img src="https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB" alt="React"/>
+  <img src="https://img.shields.io/badge/-ApolloGraphQL-311C87?style=for-the-badge&logo=apollo-graphql" alt="GraphQL"/>
+  <img src="https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white" alt="NodeJS"/>
+  <img src="https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white alt="MongoDB"/>
+  <img src="https://img.shields.io/badge/express.js-%23404d59.svg?style=for-the-badge&logo=express&logoColor=%2361DAFB"Express"/>
+</p>
 
 ## Tech Stack
 
 - **Database**: MongoDB (Atlas)
-- **Server**: Node.js + Express + Apollo Server v4
-- **Client**: React 18 + Vite + Apollo Client
+- **Server**: Node.js + Express.js + Apollo Server
+- **Client**: React + Vite + Apollo Client
 - **Language**: TypeScript strict mode
 - **Code-gen**: GraphQL Code Generator for typed hooks
 - **Dev Utils**: concurrently, nodemon, ts-node-dev
