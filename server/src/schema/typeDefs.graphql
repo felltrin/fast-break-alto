@@ -7,24 +7,26 @@ type Book {
 
 type Query {
   books: [Book]
+  movies: [Movie!]!
 }
 
-type Imdb {
-  id: ID
-  rating: Int
-  votes: Int
-}
+# type Imdb {
+#   id: ID
+#   rating: Int
+#   votes: Int
+# }
 
 type Movie {
+  _id: ID!
   title: String!
   year: Int!
-  cast: [String]
-  directors: [String]
-  plot: String
-  genres: [String]
-  runtime: Int
-  rated: String
-  poster: String
-  released: Date
-  imdb: Imdb
+  #   cast: [String]
+  #   directors: [String]
+  #   plot: String
+  #   genres: [String]
+  #   runtime: Int
+  #   rated: String
+  #   poster: String
+  #   released: Date
+  #   imdb: Imdb
 }

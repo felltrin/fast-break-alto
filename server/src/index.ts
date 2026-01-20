@@ -9,6 +9,41 @@ import { join } from "path";
 import { makeExecutableSchema } from "@graphql-tools/schema";
 import "dotenv/config";
 import mongoose from "mongoose";
+import { Schema, Document, model } from "mongoose";
+
+interface IMovie extends Document {
+  title: string;
+  year: number;
+  cast?: string[];
+  directors?: string[];
+  plot?: string;
+  genres?: string[];
+  runtime?: number;
+  rated?: string;
+  poster?: string;
+  released?: Date;
+  imdb?: { id: number; rating: number; votes: number };
+}
+
+const MovieSchema = new Schema<IMovie>({
+  title: { type: String, required: true },
+  year: { type: Number, required: true },
+  cast: [String],
+  directors: [String],
+  plot: String,
+  genres: [String],
+  runtime: Number,
+  rated: String,
+  poster: String,
+  released: Date,
+  imdb: {
+    id: Number,
+    rating: Number,
+    votes: Number,
+  },
+});
+
+const Movie = model<IMovie>("Movie", MovieSchema, "movies");
 
 const URI = process.env.MONGODB_URI || "";
 
@@ -32,6 +67,7 @@ const typeDefs = readFileSync(
 const resolvers = {
   Query: {
     books: () => books,
+    movies: async () => Movie.find(),
   },
 };
 
